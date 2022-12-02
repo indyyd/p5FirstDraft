@@ -19,19 +19,13 @@ function playSynth(note){
 
 
 
-function keyPressed() {
-    if (keyCode === LEFT_ARROW){
+function keyTyped() {
+    if (key === 'a'){
         playSynth('C3');
         fill(255, 255, 0);
-    } else if(keyCode === RIGHT_ARROW){
+    } else if (key === 's'){
         playSynth('D3');
-        fill(255, 0, 255);
-    } else if(keyCode === UP_ARROW) {
-        playSynth('E3');
         fill(0, 255, 255);
-    } else if(keyCode === DOWN_ARROW) {
-        playSynth('F3');
-        fill(0, 0, 0);
     }
 }
 
