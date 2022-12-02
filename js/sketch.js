@@ -20,11 +20,20 @@ function playSynth(note){
 
 
 function keyTyped() {
-    if (key === 'a'){
+    if (key === 'g'){
         playSynth('C3');
         fill(255, 255, 0);
-    } else if (key === 's'){
+    } else if (key === 'h'){
         playSynth('D3');
+        fill(0, 255, 255);
+    } else if (key === 'j'){
+        playSynth('E3');
+        fill(0, 255, 255);
+    } else if (key === 'k'){
+        playSynth('F3');
+        fill(0, 255, 255);
+    } else if (key === 'l'){
+        playSynth('G3');
         fill(0, 255, 255);
     }
 }
