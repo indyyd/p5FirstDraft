@@ -7,75 +7,71 @@ function setup() {
     polySynth = new p5.PolySynth();
 }
 
-function playSynth(note){
+function playSynth1(){
     userStartAudio();
 
     var dur = 1.5;
     var time = 0;
     var vel = 0.1;
     
-    polySynth.play(note, vel, time += 1/3, dur);
+    polySynth.play('C3', vel, 0, dur);
+    polySynth.play('E3', vel, time += 0, dur);
+    polySynth.play('G3', vel, time += 0, dur);
+
 }
 
+function playSynth2(){
+    userStartAudio();
 
+    var dur = 1.5;
+    var time = 0;
+    var vel = 0.1;
+    
+    polySynth.play('D3', vel, 0, dur);
+    polySynth.play('F3', vel, time += 0, dur);
+    polySynth.play('A4', vel, time += 0, dur);
 
-function keyTyped() {
-    if (key === 'a') {
-        playSynth('C2');
-        fill(255, 255, 0);
-    } else if (key === 's'){
-        playSynth('D2');
-        fill(255, 255, 0);
-    } else if (key === 'd'){
-        playSynth('E2');
-        fill(255, 255, 0);
-    } else if (key === 'f'){
-        playSynth('F2');
-        fill(255, 255, 0);
-    } else if (key === 'g'){
-        playSynth('G2');
-        fill(255, 255, 0);
-    } else if (key === 'h'){
-        playSynth('A3');
-        fill(0, 255, 255);
-    } else if (key === 'j'){
-        playSynth('B3');
-        fill(0, 255, 255);
-    } else if (key === 'k'){
-        playSynth('C3');
-        fill(0, 255, 255);
-    } else if (key === 'l'){
-        playSynth('D3');
-        fill(0, 255, 255);
-    }
+}
 
-    if (key === 'z') {
-        playSynth('E3');
+function playSynth3(){
+    userStartAudio();
+
+    var dur = 1.5;
+    var time = 0;
+    var vel = 0.1;
+    
+    polySynth.play('E3', vel, 0, dur);
+    polySynth.play('G3', vel, time += 0, dur);
+    polySynth.play('B4', vel, time += 0, dur);
+
+}
+
+function playSynth4(){
+    userStartAudio();
+
+    var dur = 1.5;
+    var time = 0;
+    var vel = 0.1;
+    
+    polySynth.play('F3', vel, 0, dur);
+    polySynth.play('A4', vel, time += 0, dur);
+    polySynth.play('C4', vel, time += 0, dur);
+
+}
+
+function keyPressed() {
+    if (keyCode === LEFT_ARROW){
+        playSynth1();
         fill(255, 255, 0);
-    } else if (key === 'x'){
-        playSynth('F3');
-        fill(255, 255, 0);
-    } else if (key === 'c'){
-        playSynth('G3');
-        fill(255, 255, 0);
-    } else if (key === 'v'){
-        playSynth('A4');
-        fill(255, 255, 0);
-    } else if (key === 'b'){
-        playSynth('B4');
-        fill(255, 255, 0);
-    } else if (key === 'n'){
-        playSynth('C4');
+    } else if(keyCode === RIGHT_ARROW){
+        playSynth2();
+        fill(255, 0, 255);
+    } else if(keyCode === UP_ARROW) {
+        playSynth3();
         fill(0, 255, 255);
-    } else if (key === 'm'){
-        playSynth('D4');
-        fill(0, 255, 255);
-    } else if (key === ','){
-        playSynth('E4');
-        fill(0, 255, 255);
-    } else if (key === '.'){
-        playSynth('F4');
-        fill(0, 255, 255);
+    } else if(keyCode === DOWN_ARROW) {
+        playSynth4();
+        fill(0, 0, 0);
     }
 }
 
