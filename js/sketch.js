@@ -21,31 +21,60 @@ function playSynth(note){
 
 function keyTyped() {
     if (key === 'a') {
-        playSynth('F2');
+        playSynth('C2');
         fill(255, 255, 0);
     } else if (key === 's'){
-        playSynth('G2');
+        playSynth('D2');
         fill(255, 255, 0);
     } else if (key === 'd'){
-        playSynth('A3');
+        playSynth('E2');
         fill(255, 255, 0);
     } else if (key === 'f'){
-        playSynth('B3');
+        playSynth('F2');
         fill(255, 255, 0);
     } else if (key === 'g'){
-        playSynth('C3');
+        playSynth('G2');
         fill(255, 255, 0);
     } else if (key === 'h'){
-        playSynth('D3');
+        playSynth('A3');
         fill(0, 255, 255);
     } else if (key === 'j'){
-        playSynth('E3');
+        playSynth('B3');
         fill(0, 255, 255);
     } else if (key === 'k'){
-        playSynth('F3');
+        playSynth('C3');
         fill(0, 255, 255);
     } else if (key === 'l'){
+        playSynth('D3');
+        fill(0, 255, 255);
+    }
+
+    if (key === 'z') {
+        playSynth('E3');
+        fill(255, 255, 0);
+    } else if (key === 'x'){
+        playSynth('F3');
+        fill(255, 255, 0);
+    } else if (key === 'c'){
         playSynth('G3');
+        fill(255, 255, 0);
+    } else if (key === 'v'){
+        playSynth('A4');
+        fill(255, 255, 0);
+    } else if (key === 'b'){
+        playSynth('B4');
+        fill(255, 255, 0);
+    } else if (key === 'n'){
+        playSynth('C4');
+        fill(0, 255, 255);
+    } else if (key === 'm'){
+        playSynth('D4');
+        fill(0, 255, 255);
+    } else if (key === ','){
+        playSynth('E4');
+        fill(0, 255, 255);
+    } else if (key === '.'){
+        playSynth('F4');
         fill(0, 255, 255);
     }
 }
